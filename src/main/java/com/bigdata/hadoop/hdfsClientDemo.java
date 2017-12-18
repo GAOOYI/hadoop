@@ -25,4 +25,6 @@ public class hdfsClientDemo {
         fs.copyFromLocalFile(new Path("H:\\java\\传智云计算三期\\杂记.txt"),new Path("/杂记.txt.copy"));
         fs.close();
     }
+
+
 }
