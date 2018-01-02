@@ -72,6 +72,11 @@ class flowCountReduce extends Reducer<Text,Flowbean,Text,Flowbean> {
         Flowbean flowbean = new Flowbean(upFlowTotal, downFlowTotal);
         context.write(key,flowbean);
     }
+
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
+        super.cleanup(context);
+    }
 }
 
 class flowCountPartition extends Partitioner<Text,Flowbean>{

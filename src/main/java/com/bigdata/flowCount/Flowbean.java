@@ -11,10 +11,15 @@ public class Flowbean implements Writable{
     private long downFlow;
     private long totalFlow;
 
-    public Flowbean() {
-    }
+    public Flowbean() { }
 
     public Flowbean(long upFlow, long downFlow) {
+        this.upFlow = upFlow;
+        this.downFlow = downFlow;
+        this.totalFlow = upFlow + downFlow;
+    }
+
+    public void set(long upFlow, long downFlow) {
         this.upFlow = upFlow;
         this.downFlow = downFlow;
         this.totalFlow = upFlow + downFlow;
